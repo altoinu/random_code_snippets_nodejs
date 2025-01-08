@@ -1,4 +1,4 @@
-# base_nodejs_project-20241223
+# random_code_snippets_nodejs
 
 Sample basic Node.js project setup with some dev dependencies
 
@@ -19,7 +19,7 @@ npm install
 ## To run
 
 ```
-node src/index.mjs
+node src/[whatever file you want to run]
 ```
 
 ## Lint

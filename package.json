@@ -1,7 +1,7 @@
 {
-  "name": "base_nodejs_project-20241223",
+  "name": "random_code_snippets_nodejs",
   "version": "1.0.0",
-  "description": "Sample basic Node.js project setup with some dev dependencies",
+  "description": "Random small code snippets, notes, could be useful for something",
   "private": true,
   "main": "src/index.mjs",
   "scripts": {
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/altoinu/base_nodejs_project-20241223.git"
+    "url": "git+https://github.com/altoinu/random_code_snippets_nodejs.git"
   },
   "author": "Kaoru Kawashima",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/altoinu/base_nodejs_project-20241223/issues"
+    "url": "https://github.com/altoinu/random_code_snippets_nodejs/issues"
   },
-  "homepage": "https://github.com/altoinu/base_nodejs_project-20241223#readme",
+  "homepage": "https://github.com/altoinu/random_code_snippets_nodejs#readme",
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@types/node": "^22.10.5",
