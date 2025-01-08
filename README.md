@@ -1,6 +1,7 @@
 # random_code_snippets_nodejs
 
-Sample basic Node.js project setup with some dev dependencies
+This project contains random small code snippets that don't really need full
+project of their own, notes, and anything that could be useful for something someday.
 
 ## Writing README stuff
 
