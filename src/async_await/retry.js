@@ -1,6 +1,6 @@
 /**
  * Retries specified apiCall function until success or reaches max number of retries
- * @param {() => Promise} apiCall
+ * @param {function():Promise} apiCall async function
  * @param {number} [maxRetries] Max number of retries
  * @param {number} [delay] Wait time in between retries in milliseconds
  * @returns {Promise} Result promise from apiCall

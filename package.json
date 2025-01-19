@@ -10,7 +10,9 @@
     "lint:fix": "npm-run-all prettier eslint",
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "test:watch": "node --experimental-vm-modules node_modules/.bin/jest --watch",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build:doc": "npm-run-all -p build:doc:*",
+    "build:doc:jsdoc": "jsdoc -P package.json -R README.md -c jsdoc.config.js -r -d docs/jsdoc"
   },
   "repository": {
     "type": "git",
