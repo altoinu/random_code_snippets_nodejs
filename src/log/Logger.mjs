@@ -42,7 +42,7 @@ function Logger(enabled = true) {
 /**
  * Outputs log to console.
  * @memberof Logger
- * @function log
+ * @function
  */
 Logger.prototype.log = function () {
   const args = Array.prototype.slice.call(arguments);
@@ -52,7 +52,7 @@ Logger.prototype.log = function () {
 /**
  * Outputs error to console.
  * @memberof Logger
- * @function error
+ * @function
  */
 Logger.prototype.error = function () {
   const args = Array.prototype.slice.call(arguments);

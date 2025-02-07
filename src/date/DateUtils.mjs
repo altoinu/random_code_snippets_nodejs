@@ -1,5 +1,12 @@
 /**
+ * Date utility functions.
+ * @namespace DateUtils
+ */
+
+/**
  * Returns month in 01, 02, 03... 12
+ * @memberof DateUtils
+ * @function getCurrentMonthInString
  * @param {Date} date
  * @returns Month in 01, 02, 03... 12
  */
@@ -10,6 +17,8 @@ export function getCurrentMonthInString(date) {
 
 /**
  * Returns date in YYYY-MM-DD format
+ * @memberof DateUtils
+ * @function getDateString
  * @param {Date} date
  * @returns date in YYYY-MM-DD format
  */
