@@ -8,7 +8,7 @@
  * @memberof DateUtils
  * @function getCurrentMonthInString
  * @param {Date} date
- * @returns Month in 01, 02, 03... 12
+ * @returns {string} Month in 01, 02, 03... 12
  */
 export function getCurrentMonthInString(date) {
   const month = date.getMonth() + 1;
@@ -20,7 +20,7 @@ export function getCurrentMonthInString(date) {
  * @memberof DateUtils
  * @function getDateString
  * @param {Date} date
- * @returns date in YYYY-MM-DD format
+ * @returns {string} date in YYYY-MM-DD format
  */
 export function getDateString(date) {
   return (
