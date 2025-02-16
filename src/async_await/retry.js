@@ -33,6 +33,8 @@ async function retryApiCall(apiCall, maxRetries = 3, delay = 1000) {
   throw new Error(`Failed after ${maxRetries} retries.`);
 }
 
+export { retryApiCall };
+
 // Example usage:
 async function myApiCall() {
   // Replace with your actual API call logic
