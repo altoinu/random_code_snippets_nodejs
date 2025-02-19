@@ -8,7 +8,6 @@ const __dirname = dirname(__filename);
 /**
  * For when using client side routing like react-router and sub folder on server
  * (ex http://www.example.com/path/to/react/app/)
- * @function createReactRouterClientSideRouting
  * @param {string} filePath Path that contains compiled React app/page
  *
  * @see {@link https://create-react-app.dev/docs/deployment/#serving-apps-with-client-side-routing}
@@ -20,7 +19,7 @@ const __dirname = dirname(__filename);
  *
  * app.use(router);
  */
-export default function createReactRouterClientSideRouting(filePath) {
+export function createReactRouterClientSideRouting(filePath) {
   const router = express.Router();
 
   // static assets
