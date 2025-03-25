@@ -15,6 +15,7 @@
     "build:doc": "npm-run-all -p build:doc:*",
     "build:doc:apidoc": "apidoc -c apidoc.json -f \".*\\.js$\" -f \".*\\.mjs$\" -i src/ -o docs/apidoc",
     "build:doc:jsdoc": "jsdoc -P package.json -R README.md -c jsdoc.config.js -r -d docs/jsdoc",
+    "release:beta": "npm version prerelease --preid=beta",
     "release:beta:patch": "npm version $(semver $npm_package_version -i prerelease --preid beta)",
     "release:beta:minor": "npm version $(semver $npm_package_version -i preminor --preid beta)",
     "release:beta:major": "npm version $(semver $npm_package_version -i premajor --preid beta)",
