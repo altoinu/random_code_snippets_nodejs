@@ -26,8 +26,7 @@
     "release:patch": "npm version patch",
     "release:minor": "npm version minor",
     "release:major": "npm version major",
-    "preversion": "git checkout main && git pull &&  npm install && npm run test",
-    "postversion": "git push && git push --tags"
+    "preversion": "git checkout main && git pull &&  npm install && npm run test"
   },
   "repository": {
     "type": "git",
