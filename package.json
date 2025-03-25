@@ -1,6 +1,6 @@
 {
   "name": "random_code_snippets_nodejs",
-  "version": "1.0.1-beta.1",
+  "version": "1.0.1-rc.0",
   "description": "Random small code snippets, notes, could be useful for something",
   "private": true,
   "main": "src/index.mjs",
