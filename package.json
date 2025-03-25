@@ -1,6 +1,6 @@
 {
   "name": "random_code_snippets_nodejs",
-  "version": "1.0.1-rc.0",
+  "version": "1.0.1-rc.1",
   "description": "Random small code snippets, notes, could be useful for something",
   "private": true,
   "main": "src/index.mjs",
@@ -26,7 +26,8 @@
     "release:patch": "npm version patch",
     "release:minor": "npm version minor",
     "release:major": "npm version major",
-    "preversion": "git checkout main && git pull && npm install && npm run test"
+    "preversion": "git checkout main && git pull && npm install && npm run test",
+    "postversion": "git push origin && git push origin --tags"
   },
   "repository": {
     "type": "git",
