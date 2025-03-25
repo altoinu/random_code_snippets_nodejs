@@ -70,7 +70,7 @@ npm run build:doc:jsdoc
 
 ## Bumping version
 
-Use one of `release:xxx:xxx` scripts to do to update version on the `main` branch (via `npm version`). It will also create a new commit and a tag.
+Use one of `release:xxx:xxx` scripts to do to update version on the `main` branch (via `npm version`). It will also create a new commit and a tag, then automatically git push-es them to the origin.
 
 For more info:
 
