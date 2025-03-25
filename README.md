@@ -67,3 +67,25 @@ npm run build:doc:jsdoc
     - [Function](https://jsdoc.app/tags-function.html)
     - [Class](https://jsdoc.app/tags-class.html)
   - [typedef](https://jsdoc.app/tags-typedef)
+
+## Bumping version
+
+Use one of `release:xxx:xxx` scripts to do to update version on the `main` branch (via `npm version`). It will also create a new commit and a tag.
+
+For more info:
+
+- https://semver.org/
+- https://en.wikipedia.org/wiki/Software_release_life_cycle
+- https://docs.npmjs.com/cli/v11/commands/npm-version
+
+```
+# bump up release type version, and mark as beta
+npm run release:beta:patch
+
+# bump up beta/rc build number only
+npm run release:beta
+npm run release:rc
+
+# bump up release type version for final release
+npm run release:minor
+```
