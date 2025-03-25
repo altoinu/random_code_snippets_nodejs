@@ -14,7 +14,13 @@
     "prepare": "husky install",
     "build:doc": "npm-run-all -p build:doc:*",
     "build:doc:apidoc": "apidoc -c apidoc.json -f \".*\\.js$\" -f \".*\\.mjs$\" -i src/ -o docs/apidoc",
-    "build:doc:jsdoc": "jsdoc -P package.json -R README.md -c jsdoc.config.js -r -d docs/jsdoc"
+    "build:doc:jsdoc": "jsdoc -P package.json -R README.md -c jsdoc.config.js -r -d docs/jsdoc",
+    "release:major": "npm version major",
+    "release:minor": "npm version minor",
+    "release:patch": "npm version patch",
+    "release:beta:major": "npm version $(semver $npm_package_version -i premajor --preid beta)",
+    "release:beta:minor": "npm version $(semver $npm_package_version -i preminor --preid beta)",
+    "release:beta:patch": "npm version $(semver $npm_package_version -i prerelease --preid beta)"
   },
   "repository": {
     "type": "git",
@@ -40,7 +46,8 @@
     "lint-staged": "^15.2.11",
     "npm-run-all": "^4.1.5",
     "prettier": "3.4.2",
-    "prettier-plugin-sort-imports": "^1.8.6"
+    "prettier-plugin-sort-imports": "^1.8.6",
+    "semver": "^7.7.1"
   },
   "dependencies": {
     "axios": "^1.7.9",
