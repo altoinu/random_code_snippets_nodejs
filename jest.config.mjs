@@ -51,6 +51,8 @@ const config = {
   // Make calling deprecated APIs throw helpful error messages
   // errorOnDeprecated: false,
 
+  extensionsToTreatAsEsm: [".ts", ".mts"],
+
   // The default configuration for fake timers
   // fakeTimers: {
   //   "enableGlobally": false
@@ -83,14 +85,20 @@ const config = {
   //   "cjs",
   //   "jsx",
   //   "ts",
+  //   "mts",
+  //   "cts",
   //   "tsx",
   //   "json",
   //   "node"
   // ],
-  moduleFileExtensions: ["js", "mjs", "cjs"],
+  moduleFileExtensions: ["js", "mjs", "cjs", "ts", "mts", "cts", "json"],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
+  moduleNameMapper: {
+    // Map .js imports to their corresponding .ts files globally
+    "^(\\.{1,2}/.*)\\.js$": "$1",
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -105,6 +113,7 @@ const config = {
 
   // A preset that is used as a base for Jest's configuration
   // preset: undefined,
+  preset: "ts-jest/presets/default-esm", // Add the ESM preset
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -126,6 +135,7 @@ const config = {
 
   // The root directory that Jest should scan for tests and modules within
   // rootDir: undefined,
+  rootDir: "./",
 
   // A list of paths to directories that Jest should use to search for files in
   // roots: [
@@ -139,6 +149,7 @@ const config = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
+  // setupFilesAfterEnv: [],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.mjs"],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
@@ -159,13 +170,9 @@ const config = {
 
   // The glob patterns Jest uses to detect test files
   // testMatch: [
-  //   "**/__tests__/**/*.[jt]s?(x)",
-  //   "**/?(*.)+(spec|test).[tj]s?(x)"
+  //   "**/__tests__/**/*.?([mc])[jt]s?(x)",
+  //   "**/?(*.)+(spec|test).?([mc])[jt]s?(x)"
   // ],
-  //testMatch: [
-  //"**/__tests__/**/*.{js,cjs,mjs}",
-  //"**/?(*.)+(spec|test).{js,cjs,mjs}",
-  //],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [
@@ -174,7 +181,7 @@ const config = {
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
-  testRegex: ["(/__tests__/.*|.*\\.(spec|test))\\.(c|m)?js$"],
+  testRegex: ["(/__tests__/.*|.*\\.(spec|test))\\.(c|m)?(j|t)sx?$"],
 
   // This option allows the use of a custom results processor
   // testResultsProcessor: undefined,
@@ -184,6 +191,14 @@ const config = {
 
   // A map from regular expressions to paths to transformers
   // transform: undefined,
+  transform: {
+    "^.+\\.m?[tj]sx?$": [
+      "ts-jest",
+      {
+        useESM: true,
+      },
+    ],
+  },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
