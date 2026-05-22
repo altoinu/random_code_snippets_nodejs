@@ -1,4 +1,4 @@
-const linststagedConfig = {
+const lintstagedConfig = {
   // Target your source files for linting and formatting
   "*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}": ["npm run lint:fix", "prettier --write"],
 
@@ -6,4 +6,4 @@ const linststagedConfig = {
   "*.{md,css}": ["prettier --write"],
 };
 
-export default linststagedConfig;
+export default lintstagedConfig;
